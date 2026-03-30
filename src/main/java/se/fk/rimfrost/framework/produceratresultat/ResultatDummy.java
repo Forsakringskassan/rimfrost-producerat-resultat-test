@@ -16,9 +16,10 @@ public interface ResultatDummy extends ResultatMappable<ResultatDummy>
 
    int anInt();
 
-    /** Static factory to deserialize JSON */
-    static ResultatDummy from(String json) {
-        return ResultatMappable.fromJson(json, ResultatDummy.class);
-    }
+   /** Static factory to deserialize JSON */
+   static ResultatDummy from(String json)
+   {
+      return ResultatMappable.fromJson(json, ResultatDummy.class);
+   }
 
 }
