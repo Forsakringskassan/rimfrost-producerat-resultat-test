@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>se.fk.maven</groupId>
+    <artifactId>fk-maven-parent</artifactId>
+    <version>1.11.1</version>
+  </parent>
+
+  <groupId>se.fk.rimfrost.framework.produceratresultat</groupId>
+  <artifactId>rimfrost-framework-producerat-resultat-test</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>Rimfrost Framework Producerat resultat test</name>
+
+  <distributionManagement>
+    <repository>
+      <id>github--Forsakringskassan--repository</id>
+      <url>https://maven.pkg.github.com/Forsakringskassan/repository</url>
+    </repository>
+  </distributionManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.immutables</groupId>
+      <artifactId>value</artifactId>
+      <version>2.11.6</version>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>5.14.3</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.21.1</version>
+    </dependency>
+    <dependency>
+      <groupId>jakarta.annotation</groupId>
+      <artifactId>jakarta.annotation-api</artifactId>
+      <version>2.1.1</version>
+    </dependency>
+    <dependency>
+      <groupId>se.fk.rimfrost.framework.produceratresultat</groupId>
+      <artifactId>rimfrost-framework-producerat-resultat</artifactId>
+      <version>0.0.2</version>
+    </dependency>
+  </dependencies>
+
+  <repositories>
+    <repository>
+      <id>central</id>
+      <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
+    <repository>
+      <id>github--Forsakringskassan--repository</id>
+      <url>https://maven.pkg.github.com/Forsakringskassan/repository</url>
+    </repository>
+  </repositories>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.14.1</version>
+        <configuration>
+          <compilerArgs>
+            <arg>-parameters</arg>
+          </compilerArgs>
+          <annotationProcessorPaths>
+            <path>
+              <groupId>org.immutables</groupId>
+              <artifactId>value-processor</artifactId>
+              <version>2.10.0</version>
+            </path>
+          </annotationProcessorPaths>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
